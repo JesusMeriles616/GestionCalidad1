@@ -11,25 +11,48 @@
             margin: 0 auto;
             padding: 20px;
         }
+        
         .container {
             background-color: #f5f5f5;
             padding: 20px;
             border-radius: 5px;
             margin-top: 20px;
         }
+        
         .form-group {
             margin-bottom: 15px;
         }
-        label {
-            display: block;
-            margin-bottom: 5px;
+        
+        .sexo-group {
+          margin-top: 10px;
         }
+        
+        .sexo-group input {
+          margin-right: 5px;
+        }
+        
+        form {
+          background-color: white;
+          padding: 30px;
+          border-radius: 12px;
+          box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+          width: 300px;
+        }   
+        
+        label {
+          display: block;
+          margin-top: 15px;
+          font-weight: bold;
+          color: #333;
+        }
+        
         input {
             width: 100%;
             padding: 8px;
             border: 1px solid #ddd;
             border-radius: 4px;
         }
+        
         button {
             background-color: #4CAF50;
             color: white;
@@ -38,19 +61,44 @@
             border-radius: 4px;
             cursor: pointer;
         }
+        
         button:hover {
             background-color: #45a049;
+        }
+        
+        select {
+          width: 100%;
+          padding: 8px;
+          margin-top: 5px;
+          border: 1px solid #ccc;
+          border-radius: 6px;
+          box-sizing: border-box;
         }
     </style>
 </head>
 <body>
-    <h1>prueba commit</h1>
+    <h1>Introduzca sus datos en el siguiente formulario:</h1>
     <div class="container">
         <h2>Registro de Usuario</h2>
         <form id="userForm">
             <div class="form-group">
                 <label for="nombre">Nombre:</label>
                 <input type="text" id="nombre" required>
+            </div>
+            <div class="form-group">
+                <label for="nombre">Nombre:</label>
+                <input type="text" id="nombre" required>
+            </div>
+            <label for="fecha">Fecha de nacimiento:</label>
+            <input type="date" id="fecha" name="fecha" required>
+            <div>
+                <label for="sexo">Sexo:</label>
+                <select id="sexo" name="sexo" required>
+                    <option value="">Seleccione...</option>
+                    <option value="masculino">Masculino</option>
+                    <option value="femenino">Femenino</option>
+                    <option value="otro">Otro</option>
+                </select>
             </div>
             <div class="form-group">
                 <label for="email">Email:</label>

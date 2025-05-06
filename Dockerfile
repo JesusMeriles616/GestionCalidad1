@@ -1,15 +1,14 @@
-FROM jenkins/jenkins:lts
+# Utiliza una imagen base de Java (OpenJDK)
+FROM openjdk:17-jdk-slim
 
-# Evitar la instalación inicial de plugins
-ENV JAVA_OPTS="-Djenkins.install.runSetupWizard=false"
+# Establece el directorio de trabajo dentro del contenedor
+WORKDIR /app
 
-# Instalar plugins necesarios
-COPY plugins.txt /usr/share/jenkins/ref/plugins.txt
-RUN jenkins-plugin-cli --plugin-file /usr/share/jenkins/ref/plugins.txt
+# Copia el archivo WAR de la aplicación al contenedor
+COPY target/demo-0.0.1-SNAPSHOT.war app.war
 
-# Crear usuario administrador
-ENV JENKINS_USER=admin
-ENV JENKINS_PASS=admin
+# Expone el puerto en el que la aplicación escucha (el mismo que configuraste en Spring Boot)
+EXPOSE 8082
 
-# Puerto por defecto
-EXPOSE 8080 
+# Comando para ejecutar la aplicación cuando el contenedor se inicie
+ENTRYPOINT ["java", "-jar", "app.war"]

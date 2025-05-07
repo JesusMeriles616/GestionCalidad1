@@ -16,7 +16,9 @@ async function guardarUsuario(event) {
             },
             body: JSON.stringify({
                 nombre: nombre,
-                email: email
+                email: email,
+                edad: edad,
+                tipo: tipo
             })
         });
 

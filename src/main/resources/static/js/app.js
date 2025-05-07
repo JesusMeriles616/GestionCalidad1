@@ -7,7 +7,7 @@ async function guardarUsuario(event) {
     
     const nombre = document.getElementById('nombre').value;
     const email = document.getElementById('email').value;
-    const edad = document.getElementById('edad').value;
+    const fecha = document.getElementById('fecha').value;
     const tipo = document.getElementById('tipo').value;
     
     try {
@@ -19,7 +19,7 @@ async function guardarUsuario(event) {
             body: JSON.stringify({
                 nombre: nombre,
                 email: email,
-                edad: edad,
+                fecha: fecha,
                 tipo: tipo
             })
         });

@@ -20,6 +20,8 @@ public class UserController {
         private Long id;
         private String nombre;
         private String email;
+        private String edad;
+        private String tipo;
 
         // Getters y Setters
         public Long getId() {
@@ -37,8 +39,20 @@ public class UserController {
         public String getEmail() {
             return email;
         }
-        public void setEmail(String email) {
+        public void setEmail(Short edad) {
             this.email = email;
+        }
+        public Short getEdad() {
+            return edad;
+        }
+        public void setEdad(Short edad) {
+            this.edad = edad;
+        }
+        public Short getTipo() {
+            return edad;
+        }
+        public void setTipo(Short tipo) {
+            this.tipo = tipo;
         }
     }
 } 

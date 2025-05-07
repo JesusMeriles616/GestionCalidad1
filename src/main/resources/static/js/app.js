@@ -7,6 +7,8 @@ async function guardarUsuario(event) {
     
     const nombre = document.getElementById('nombre').value;
     const email = document.getElementById('email').value;
+    const edad = document.getElementById('edad').value;
+    const tipo = document.getElementById('tipo').value;
     
     try {
         const response = await fetch('/api/usuarios', {

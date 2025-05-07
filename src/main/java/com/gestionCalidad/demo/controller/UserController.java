@@ -20,7 +20,7 @@ public class UserController {
         private Long id;
         private String nombre;
         private String email;
-        private String edad;
+        private String fecha;
         private String tipo;
 
         // Getters y Setters
@@ -39,17 +39,17 @@ public class UserController {
         public String getEmail() {
             return email;
         }
-        public void setEmail(Short edad) {
+        public void setEmail(String email) {
             this.email = email;
         }
-        public Short getEdad() {
-            return edad;
+        public Short getFecha() {
+            return fecha;
         }
-        public void setEdad(Short edad) {
-            this.edad = edad;
+        public void setFecha(String fecha) {
+            this.fecha = fecha;
         }
         public Short getTipo() {
-            return edad;
+            return tipo;
         }
         public void setTipo(Short tipo) {
             this.tipo = tipo;

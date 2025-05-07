@@ -42,17 +42,17 @@ public class UserController {
         public void setEmail(String email) {
             this.email = email;
         }
-        public Short getFecha() {
+        public String getFecha() {
             return fecha;
         }
         public void setFecha(String fecha) {
             this.fecha = fecha;
         }
-        public Short getTipo() {
+        public String getTipo() {
             return tipo;
         }
-        public void setTipo(Short tipo) {
+        public void setTipo(String tipo) {
             this.tipo = tipo;
         }
     }
-} 
+}

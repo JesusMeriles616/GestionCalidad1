@@ -1,6 +1,15 @@
-# Proyecto Temporal de Gestion de Calidad 1-2025
+## Instrucciones para compilar y ejecutar Tres en Raya por consola
 
-Este proyecto consiste en una aplicacion para el almacenamiento de usuarios.
+1. **Abre una terminal en la raíz del proyecto.**
 
-## Etapas de desarrollo
-  Etapa 1.- Integracion continua con Jenkins
+2. **Compila el proyecto con Maven:**
+   ```sh
+   mvn clean package
+   ```
+
+3. **Ejecuta el juego con:**
+   ```sh
+   java -cp target/demo-0.0.1-SNAPSHOT.jar com.gestionCalidad.demo.TresEnRaya
+   ```
+
+4. **Sigue las instrucciones en pantalla para jugar desde la consola.**

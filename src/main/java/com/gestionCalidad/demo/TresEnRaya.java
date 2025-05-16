@@ -74,7 +74,7 @@ public class TresEnRaya {
     public static void main(String[] args) {
         TresEnRaya juego = new TresEnRaya();
         Scanner sc = new Scanner(System.in);
-        System.out.println("Bienvenido a Tres en Raya (3 en raya) por consola");
+        System.out.println("Bienvenido a Tres en Raya (3 en raya) por consola!");
         juego.mostrarTablero();
         while (true) {
             System.out.println("Turno de: " + juego.getJugadorActual());

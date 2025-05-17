@@ -27,17 +27,14 @@ public class TresEnRaya {
         }
     }
 
-    public boolean colocarPieza(int fila, int columna) {
+    public void colocarPieza(int fila, int columna) {
         if (fila < 0 || fila > 2 || columna < 0 || columna > 2) {
-            System.out.println("Posición fuera de rango. Intenta de nuevo.");
-            return false;
+            throw new IndexOutOfBoundsException("Posición fuera del tablero");
         }
         if (tablero[fila][columna] != ' ') {
-            System.out.println("Espacio ocupado. Intenta de nuevo.");
-            return false;
+            throw new IllegalArgumentException("La casilla ya está ocupada");
         }
         tablero[fila][columna] = jugadorActual;
-        return true;
     }
 
     public void cambiarJugador() {
@@ -83,7 +80,10 @@ public class TresEnRaya {
             System.out.print("Columna (0-2): ");
             int columna = sc.hasNextInt() ? sc.nextInt() : -1;
             sc.nextLine(); // limpiar buffer
-            if (!juego.colocarPieza(fila, columna)) {
+            try {
+                juego.colocarPieza(fila, columna);
+            } catch (IndexOutOfBoundsException | IllegalArgumentException e) {
+                System.out.println(e.getMessage());
                 continue;
             }
             juego.mostrarTablero();

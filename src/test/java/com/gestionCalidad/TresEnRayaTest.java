@@ -59,6 +59,36 @@ public class TresEnRayaTest {
         assertTrue(juego.hayGanador());
     }
 
+    //--------------Test requrimientos 1-------------------
+
+    @Test
+    void lanzarExcepcionSiPiezaFueraDelEjeX() {
+        TresEnRaya juego = new TresEnRaya();
+        Exception ex = assertThrows(IndexOutOfBoundsException.class, () -> {
+            juego.colocarPieza(3, 1); // X fuera del rango (0-2)
+        });
+        assertEquals("Posición fuera del tablero", ex.getMessage());
+    }
+
+    @Test
+    void lanzarExcepcionSiPiezaFueraDelEjeY() {
+        TresEnRaya juego = new TresEnRaya();
+        Exception ex = assertThrows(IndexOutOfBoundsException.class, () -> {
+            juego.colocarPieza(1, -1); // Y fuera del rango (0-2)
+        });
+        assertEquals("Posición fuera del tablero", ex.getMessage());
+    }
+
+    @Test
+    void lanzarExcepcionSiPiezaEnLugarOcupado() {
+        TresEnRaya juego = new TresEnRaya();
+        juego.colocarPieza(0, 0); // Primer movimiento válido
+        Exception ex = assertThrows(IllegalArgumentException.class, () -> {
+            juego.colocarPieza(0, 0); // Lugar ya ocupado
+        });
+        assertEquals("La casilla ya está ocupada", ex.getMessage());
+    }
+
 
     //----------------------------------------------------------------------------/
 

@@ -2,7 +2,7 @@ package com.gestionCalidad;
 
 import com.gestionCalidad.demo.TresEnRaya;
 import org.junit.jupiter.api.Test;
-import static org.junit.jupiter.api.Assume.*;
+import static org.junit.jupiter.api.Assumptions.*;
 import static org.junit.jupiter.api.Assertions.*;
 
 public class TresEnRayaTest {

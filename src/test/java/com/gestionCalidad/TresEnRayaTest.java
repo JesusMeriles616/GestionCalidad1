@@ -2,6 +2,7 @@ package com.gestionCalidad;
 
 import com.gestionCalidad.demo.TresEnRaya;
 import org.junit.jupiter.api.Test;
+import static org.junit.Assume.*;
 import static org.junit.jupiter.api.Assertions.*;
 
 public class TresEnRayaTest {
@@ -91,34 +92,32 @@ public class TresEnRayaTest {
 
     //--------------Test requrimientos 2-------------------
 
-    //@Test
+    @Test
     void primeroEnJugarEsX() {
         TresEnRaya juego = new TresEnRaya();
-        juego.colocarPieza(0, 0); // Primer movimiento válido
-        Exception ex = assertThrows(IllegalArgumentException.class, () -> {
-            juego.colocarPieza(0, 0); // Lugar ya ocupado
-        });
-        assertEquals("Esperado", ex.getMessage());
+
+        char esperado = 'X';
+        char jugadorActual = juego.getJugadorActual();
+        
+        assumeTrue("No es el primer turno, se salta esta prueba", juego.getTurno == 1);
+        assertEquals(esperado, jugadorActual);
     }
 
-    //@Test
-    void opuestoAX() {
+    @Test
+    void opuestoAlAnterior() {
         TresEnRaya juego = new TresEnRaya();
-        juego.colocarPieza(0, 0); // Primer movimiento válido
-        Exception ex = assertThrows(IllegalArgumentException.class, () -> {
-            juego.colocarPieza(0, 0); // Lugar ya ocupado
-        });
-        assertEquals("Esperado", ex.getMessage());
-    }
+        int turno = juego.getTurno();
+        chat jugadorActual = juego.getJugadorActual();
 
-    //@Test
-    void opuestoAMas() {
-        TresEnRaya juego = new TresEnRaya();
-        juego.colocarPieza(0, 0); // Primer movimiento válido
-        Exception ex = assertThrows(IllegalArgumentException.class, () -> {
-            juego.colocarPieza(0, 0); // Lugar ya ocupado
-        });
-        assertEquals("Esperado", ex.getMessage());
+        for (int turno = 1; turno <= 9; turno++){
+            jugadorActual = juego.getJugadorActual();
+            if (turno % 2 == 1) {
+                assertEquals('X', jugadorActual);
+            } else {
+                assertEquals('+', jugadorActual);
+            }
+            juego.cambiarJugador();
+        }    
     }
 
 

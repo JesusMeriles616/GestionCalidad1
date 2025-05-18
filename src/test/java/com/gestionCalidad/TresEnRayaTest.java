@@ -10,7 +10,7 @@ public class TresEnRayaTest {
 
     //--------------Test requrimientos 3-------------------
 
-    //Test para comprobar que el tablero se inicializa correctamente
+
 
     @Test
     void noHayGanadorSiNoSeCumpleCondicionVictoria() {
@@ -29,7 +29,6 @@ public class TresEnRayaTest {
         juego.colocarPieza(1, 0); // X
         juego.colocarPieza(1, 1); // X
         juego.colocarPieza(1, 2); // X
-        // No cambiamos de jugador para simular que X ocupa toda la fila
         assertTrue(juego.hayGanador());
     }
 

@@ -89,6 +89,38 @@ public class TresEnRayaTest {
         assertEquals("La casilla ya está ocupada", ex.getMessage());
     }
 
+    //--------------Test requrimientos 2-------------------
+
+    @Test
+    void primeroEnJugarEsX() {
+        TresEnRaya juego = new TresEnRaya();
+        juego.colocarPieza(0, 0); // Primer movimiento válido
+        Exception ex = assertThrows(IllegalArgumentException.class, () -> {
+            juego.colocarPieza(0, 0); // Lugar ya ocupado
+        });
+        assertEquals("La casilla ya está ocupada", ex.getMessage());
+    }
+
+    @Test
+    void opuestoAX() {
+        TresEnRaya juego = new TresEnRaya();
+        juego.colocarPieza(0, 0); // Primer movimiento válido
+        Exception ex = assertThrows(IllegalArgumentException.class, () -> {
+            juego.colocarPieza(0, 0); // Lugar ya ocupado
+        });
+        assertEquals("La casilla ya está ocupada", ex.getMessage());
+    }
+
+    @Test
+    void opuestoAMas() {
+        TresEnRaya juego = new TresEnRaya();
+        juego.colocarPieza(0, 0); // Primer movimiento válido
+        Exception ex = assertThrows(IllegalArgumentException.class, () -> {
+            juego.colocarPieza(0, 0); // Lugar ya ocupado
+        });
+        assertEquals("La casilla ya está ocupada", ex.getMessage());
+    }
+
 
     //----------------------------------------------------------------------------/
 

@@ -2,7 +2,7 @@ package com.gestionCalidad;
 
 import com.gestionCalidad.demo.TresEnRaya;
 import org.junit.jupiter.api.Test;
-import static org.junit.Assume.*;
+import static org.junit.jupiter.api.Assume.*;
 import static org.junit.jupiter.api.Assertions.*;
 
 public class TresEnRayaTest {
@@ -107,9 +107,9 @@ public class TresEnRayaTest {
     void opuestoAlAnterior() {
         TresEnRaya juego = new TresEnRaya();
         int turno = juego.getTurno();
-        chat jugadorActual = juego.getJugadorActual();
+        char jugadorActual = juego.getJugadorActual();
 
-        for (int turno = 1; turno <= 9; turno++){
+        for (turno = 1; turno <= 9; turno++){
             jugadorActual = juego.getJugadorActual();
             if (turno % 2 == 1) {
                 assertEquals('X', jugadorActual);

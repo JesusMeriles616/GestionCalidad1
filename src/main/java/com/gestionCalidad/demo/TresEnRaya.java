@@ -37,7 +37,7 @@ public class TresEnRaya {
         tablero[fila][columna] = jugadorActual;
     }
 
-    public void cambiarJugador() {
+    public void cambiarJugador() { //cambiar jugador
         jugadorActual = (jugadorActual == 'X') ? 'O' : 'X';
     }
 

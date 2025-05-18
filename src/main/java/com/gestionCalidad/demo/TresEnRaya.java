@@ -51,7 +51,7 @@ public class TresEnRaya {
         return turno;
     }
 
-    public boolean hayGanador() {// hay ganador
+    public boolean hayGanador() {
         // Filas y columnas
         for (int i = 0; i < 3; i++) {
             if (tablero[i][0] == jugadorActual && tablero[i][1] == jugadorActual && tablero[i][2] == jugadorActual)
@@ -64,7 +64,7 @@ public class TresEnRaya {
             return true;
         if (tablero[0][2] == jugadorActual && tablero[1][1] == jugadorActual && tablero[2][0] == jugadorActual)
             return true;
-        return false;
+        return true;
     }
 
     public boolean tableroLleno() {

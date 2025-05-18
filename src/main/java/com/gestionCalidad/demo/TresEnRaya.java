@@ -45,7 +45,7 @@ public class TresEnRaya {
         return jugadorActual;
     }
 
-    public boolean hayGanador() {
+    public boolean hayGanador() {// hay ganador
         // Filas y columnas
         for (int i = 0; i < 3; i++) {
             if (tablero[i][0] == jugadorActual && tablero[i][1] == jugadorActual && tablero[i][2] == jugadorActual)

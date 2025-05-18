@@ -39,7 +39,7 @@ public class TresEnRaya {
     }
 
     public void cambiarJugador() { //cambiar jugador
-        jugadorActual = (jugadorActual == 'X') ? 'O' : 'X';
+        jugadorActual = (jugadorActual == 'X') ? '+' : 'X';
         turno++;
     }
 

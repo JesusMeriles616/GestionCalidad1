@@ -99,7 +99,7 @@ public class TresEnRayaTest {
         char esperado = 'X';
         char jugadorActual = juego.getJugadorActual();
         
-        assumeTrue("No es el primer turno, se salta esta prueba", juego.getTurno == 1);
+        assumeTrue("No es el primer turno, se salta esta prueba", juego.getTurno() == 1);
         assertEquals(esperado, jugadorActual);
     }
 

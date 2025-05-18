@@ -7,6 +7,7 @@ import java.util.Scanner;
 public class TresEnRaya {
     private final char[][] tablero = new char[3][3];
     private char jugadorActual = 'X';
+    private int turno = 1;
 
     public TresEnRaya() {
         for (int i = 0; i < 3; i++)
@@ -39,10 +40,15 @@ public class TresEnRaya {
 
     public void cambiarJugador() { //cambiar jugador
         jugadorActual = (jugadorActual == 'X') ? 'O' : 'X';
+        turno++;
     }
 
     public char getJugadorActual() {
         return jugadorActual;
+    }
+
+    public int getTurno(){
+        return turno;
     }
 
     public boolean hayGanador() {// hay ganador

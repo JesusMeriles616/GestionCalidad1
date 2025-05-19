@@ -15,7 +15,7 @@ public class TresEnRaya {
                 tablero[i][j] = ' ';
     }
 
-    public void mostrarTablero() {
+    public void mostrarTablero() { //muestra el tablero
         System.out.println("  0 1 2");
         for (int i = 0; i < 3; i++) {
             System.out.print(i + " ");

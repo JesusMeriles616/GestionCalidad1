@@ -67,7 +67,7 @@ public class TresEnRayaTest {
         Exception ex = assertThrows(IndexOutOfBoundsException.class, () -> {
             juego.colocarPieza(3, 1); // X fuera del rango (0-2)
         });
-        assertEquals("Mensaje incorrecto", ex.getMessage());
+        assertEquals("Posición fuera del tablero", ex.getMessage());
     }
 
     @Test
@@ -76,7 +76,7 @@ public class TresEnRayaTest {
         Exception ex = assertThrows(IndexOutOfBoundsException.class, () -> {
             juego.colocarPieza(1, -1); // Y fuera del rango (0-2)
         });
-        assertEquals("Mensaje incorrecto", ex.getMessage());
+        assertEquals("Posición fuera del tablero", ex.getMessage());
     }
 
     @Test

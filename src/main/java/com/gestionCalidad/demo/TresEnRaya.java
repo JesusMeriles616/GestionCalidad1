@@ -64,7 +64,7 @@ public class TresEnRaya {
             return true;
         if (tablero[0][2] == jugadorActual && tablero[1][1] == jugadorActual && tablero[2][0] == jugadorActual)
             return true;
-        return true;
+        return false;
     }
 
     public boolean tableroLleno() {

@@ -1,5 +1,7 @@
-##Proyecto de Gestion de Calidad - Estapa 2 (TDD)
-# Instrucciones para compilar y ejecutar Tres en Raya por consola
+# Proyecto de Gestion de Calidad - Estapa 2 (TDD)
+Tres en Raya
+
+## Instrucciones para compilar y ejecutar Tres en Raya por consola
 
 1. **Abre una terminal en la raíz del proyecto.**
 

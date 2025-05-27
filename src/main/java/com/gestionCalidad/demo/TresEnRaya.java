@@ -55,7 +55,7 @@ public class TresEnRaya {
         // Filas y columnas
         for (int i = 0; i < 3; i++) {
             if (tablero[i][0] == jugadorActual && tablero[i][1] == jugadorActual && tablero[i][2] == jugadorActual)
-                return true;
+                return false;
             if (tablero[0][i] == jugadorActual && tablero[1][i] == jugadorActual && tablero[2][i] == jugadorActual)
                 return true;
         }
